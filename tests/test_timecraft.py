@@ -1,8 +1,18 @@
-class Participant:
-    def __init__(self, name, timezone='UTC', availability='weekdays 9am-5pm'):
-        self.name = name
-        self.timezone = timezone
-        self.availability = availability
+import unittest
+from timecraft import Scheduler, Participant
 
-    def __repr__(self):
-        return f"Participant(name={self.name}, timezone={self.timezone}, availability={self.availability})"
+class TestTimecraft(unittest.TestCase):
+    def test_add_participant(self):
+        scheduler = Scheduler()
+        participant = Participant("Alice", timezone="America/New_York")
+        scheduler.add_participant(participant)
+        self.assertIn(participant, scheduler.participants)
+
+    def test_schedule_event(self):
+        scheduler = Scheduler()
+        scheduler.add_participant(Participant("Alice", timezone="UTC"))
+        event_time = scheduler.schedule_event(title="Meeting")
+        self.assertIsInstance(event_time, str)
+
+if __name__ == '__main__':
+    unittest.main()

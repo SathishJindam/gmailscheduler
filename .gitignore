@@ -1,0 +1,30 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore environment files
+.env
+venv/
+.env/
+
+# Ignore log files
+*.log
+
+# Ignore compiled code
+*.class
+
+# Ignore secret credential
+credentials.json
+token.json
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db

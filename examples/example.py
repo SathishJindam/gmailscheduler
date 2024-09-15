@@ -1,20 +1,17 @@
-from setuptools import setup, find_packages
+from timecraft import Scheduler, Participant
 
-setup(
-    name='timecraft',
-    version='0.1',
-    packages=find_packages(),
-    install_requires=[
-        'pytz',
-    ],
-    description='A flexible, timezone-aware event scheduler',
-    author='Sathish Jindam',
-    author_email='sathishjindam98@gmail.com',
-    url='https://github.com/yourusername/timecraft',
-    classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-    ],
-    python_requires='>=3.6',
+# Create a scheduler instance
+scheduler = Scheduler()
+
+# Add participants
+scheduler.add_participant(Participant("sathishjindam98@gmail.com", timezone="Europe/London", availability="weekdays 10am-4pm"))
+
+# Schedule an event (this will also add it to Google Calendar)
+# Add your credentials.json file here
+event_time = scheduler.schedule_event(
+    title="Team Sync",
+    duration=30,
+    priority_list=[ "sathishjindam98@gmail.com"]
 )
+
+print(f"Suggested Event Time: {event_time}")
