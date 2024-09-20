@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='timecraft',
+    name='gmailscheduler',
     version='0.1',
     packages=find_packages(),
     install_requires=[
@@ -14,7 +14,7 @@ setup(
     description='A flexible, timezone-aware event scheduler',
     author='Sathish Jindam',
     author_email='sathishjindam98@gmail.com',
-    url='https://github.com/yourusername/timecraft',
+    url='https://github.com/SathishJindam/timecraft',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',

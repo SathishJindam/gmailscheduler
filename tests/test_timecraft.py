@@ -1,7 +1,7 @@
 import unittest
-from timecraft import Scheduler, Participant
+from gmailscheduler import Scheduler, Participant
 
-class TestTimecraft(unittest.TestCase):
+class TestGmailScheduler(unittest.TestCase):
     def test_add_participant(self):
         scheduler = Scheduler()
         participant = Participant("Alice", timezone="America/New_York")
