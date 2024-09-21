@@ -100,7 +100,7 @@ class Scheduler:
             print("No suitable slots found.")
             return None
 
-        best_start,best_end = best_slot[0], best_slot[1]
+        best_start, best_end = best_slot[0], best_slot[1]
 
 
         # Add the event to Google Calendar

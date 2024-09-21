@@ -30,3 +30,4 @@ token.json
 Thumbs.db
 /dist/
 /gmailscheduler.egg-info/
+/build/

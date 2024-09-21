@@ -1,5 +1,4 @@
 from gmailscheduler import Scheduler, Participant
-
 # Create a scheduler instance
 scheduler = Scheduler()
 
